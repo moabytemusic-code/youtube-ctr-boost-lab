@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { calculateCTRScore, generateTitles, generateHooks, generateThumbnailText } from '@/lib/logic';
-import { sendBrevoEmail } from '@/lib/brevo';
+import { sendBrevoEmail, createBrevoContact } from '@/lib/brevo';
 
 export async function POST(request) {
     try {
@@ -66,6 +66,15 @@ export async function POST(request) {
                 to: email,
                 subject: `Your CTR Boost Pack: ${title}`,
                 htmlContent: htmlContent
+            });
+
+            // Add to Brevo Contacts list
+            await createBrevoContact({
+                email: email,
+                attributes: {
+                    FIRSTNAME: 'YouTube Creator', // Generic name or parsed from email
+                    LEAD_SOURCE: 'CTR_Boost_Lab'
+                }
             });
         }
 
