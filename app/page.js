@@ -220,7 +220,7 @@ export default function Home() {
                             Your full YouTube CTR Boost Pack has been sent to <b>{formData.email}</b>. Check your inbox (and spam folder) in the next 2-3 minutes.
                         </p>
 
-                        <a href="#" className="primary-btn" style={{ maxWidth: '400px', textAlign: 'center', background: '#333' }}>
+                        <a href="/" className="primary-btn" style={{ maxWidth: '400px', textAlign: 'center', background: '#333' }}>
                             Go Back Home
                         </a>
 
