@@ -85,6 +85,15 @@ export async function POST(request) {
             - The YouTube CTR Boost Lab Team
           </p>
         </div>
+          <div style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px;">
+            <p><strong>Want to grow faster? Here are the tools we recommend:</strong></p>
+            <p>
+              🚀 <a href="https://www.tubebuddy.com" style="color: #FF2D55; text-decoration: none; font-weight: bold;">TubeBuddy</a> - Rank #1 for keywords<br/>
+              ⚡ <a href="https://vidiq.com" style="color: #FF2D55; text-decoration: none; font-weight: bold;">VidIQ</a> - Steal your competitors' views<br/>
+              🎵 <a href="https://www.epidemicsound.com" style="color: #FF2D55; text-decoration: none; font-weight: bold;">Epidemic Sound</a> - Best music for creators
+            </p>
+          </div>
+        </div>
       `;
 
             // Send the email (fire and forget usage, or await if critical)
