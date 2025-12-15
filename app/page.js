@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Sparkles, Zap, Lock, Mail, CheckCircle, Youtube, BarChart2, HelpCircle, X } from 'lucide-react';
+import { Sparkles, Zap, Lock, Mail, CheckCircle, Youtube, BarChart2, CircleHelp, X } from 'lucide-react';
 import RecommendedTools from './components/RecommendedTools';
 import './globals.css';
 
@@ -239,7 +239,7 @@ export default function Home() {
                 onClick={() => setShowHelp(true)}
                 style={{ position: 'fixed', top: '20px', right: '20px', background: '#000', border: '1px solid #333', padding: '10px 16px', borderRadius: '30px', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 9999, boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
             >
-                <span style={{ fontWeight: 'bold', fontSize: '14px' }}>How To Use</span> <HelpCircle size={20} />
+                <span style={{ fontWeight: 'bold', fontSize: '14px' }}>How To Use</span> <CircleHelp size={20} />
             </button>
 
             {/* Help Modal */}
