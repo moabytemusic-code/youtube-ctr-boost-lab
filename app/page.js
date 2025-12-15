@@ -238,7 +238,7 @@ export default function Home() {
             {/* Help Button - Moved Outside Main */}
             <button
                 onClick={() => setShowHelp(true)}
-                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: '#000000', border: '1px solid #333333', padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 99999, boxShadow: '0 4px 20px rgba(0,0,0,0.8)', fontWeight: 'bold', fontSize: '14px' }}
+                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: '#000000', border: '5px solid #00FF00', padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 2147483647, boxShadow: '0 4px 20px rgba(0,0,0,0.8)', fontWeight: 'bold', fontSize: '14px' }}
             >
                 <span>How To Use</span> <CircleHelp size={20} />
             </button>
