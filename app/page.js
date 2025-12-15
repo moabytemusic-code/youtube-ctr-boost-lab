@@ -233,24 +233,27 @@ export default function Home() {
                     </div>
                 )}
 
+
             </div>
-            {/* Help Button */}
+
+            {/* Help Button - Moved to Root Level */}
             <button
                 onClick={() => setShowHelp(true)}
-                style={{ position: 'fixed', top: '20px', right: '20px', background: '#000', border: '1px solid #333', padding: '10px 16px', borderRadius: '30px', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 9999, boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
+                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: '#000000', border: '1px solid #333333', padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 99999, boxShadow: '0 4px 20px rgba(0,0,0,0.8)', fontWeight: 'bold', fontSize: '14px' }}
             >
-                <span style={{ fontWeight: 'bold', fontSize: '14px' }}>How To Use</span> <CircleHelp size={20} />
+                <span>How To Use</span> <CircleHelp size={20} />
             </button>
 
             {/* Help Modal */}
             {showHelp && (
                 <div style={{
                     position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-                    background: 'rgba(0,0,0,0.8)', zIndex: 1000,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    backgroundColor: 'rgba(0,0,0,0.9)', zIndex: 100000,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    backdropFilter: 'blur(5px)'
                 }}>
                     <div style={{
-                        background: '#1a1a1a', padding: '30px', borderRadius: '12px',
+                        backgroundColor: '#1a1a1a', padding: '30px', borderRadius: '16px',
                         maxWidth: '400px', width: '90%', position: 'relative', border: '1px solid #333'
                     }}>
                         <button
