@@ -76,7 +76,7 @@ export default function Home() {
                     <div className="container">
                         <div className="flex-center" style={{ gap: '10px' }}>
                             <Youtube size={32} color="#FF2D55" />
-                            <h1 className="logo-text">YouTube CTR Boost Lab™</h1>
+                            <h1 className="logo-text">YouTube CTR Boost Lab™ (v2)</h1>
                         </div>
                         <p className="subtitle">Turn weak titles into scroll-stopping hooks in seconds.</p>
                     </div>
@@ -236,11 +236,12 @@ export default function Home() {
             </main>
 
             {/* Help Button - Moved Outside Main */}
+            {/* Help Button - Debug Mode */}
             <button
                 onClick={() => setShowHelp(true)}
-                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: '#000000', border: '5px solid #00FF00', padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 2147483647, boxShadow: '0 4px 20px rgba(0,0,0,0.8)', fontWeight: 'bold', fontSize: '14px' }}
+                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: 'red', border: '5px solid yellow', padding: '20px', zIndex: 999999, color: 'white', fontWeight: 'bold' }}
             >
-                <span>How To Use</span> <CircleHelp size={20} />
+                HELP ME
             </button>
 
             {/* Help Modal */}
