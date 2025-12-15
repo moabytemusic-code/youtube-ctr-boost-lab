@@ -237,9 +237,9 @@ export default function Home() {
             {/* Help Button */}
             <button
                 onClick={() => setShowHelp(true)}
-                style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}
+                style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#666', display: 'flex', alignItems: 'center', gap: '8px' }}
             >
-                <HelpCircle size={24} />
+                <span style={{ fontWeight: 'bold', fontSize: '14px' }}>How To Use</span> <HelpCircle size={24} />
             </button>
 
             {/* Help Modal */}
