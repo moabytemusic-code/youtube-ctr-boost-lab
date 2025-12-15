@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from 'react';
-import { Sparkles, Zap, Lock, Mail, CheckCircle, Youtube, BarChart2 } from 'lucide-react';
+import { Sparkles, Zap, Lock, Mail, CheckCircle, Youtube, BarChart2, HelpCircle, X } from 'lucide-react';
 import RecommendedTools from './components/RecommendedTools';
 import './globals.css';
 
 export default function Home() {
     const [step, setStep] = useState('input'); // input, teaser, success
     const [loading, setLoading] = useState(false);
+    const [showHelp, setShowHelp] = useState(false);
 
     // Form Data
     const [formData, setFormData] = useState({
@@ -233,6 +234,51 @@ export default function Home() {
                 )}
 
             </div>
+            {/* Help Button */}
+            <button
+                onClick={() => setShowHelp(true)}
+                style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}
+            >
+                <HelpCircle size={24} />
+            </button>
+
+            {/* Help Modal */}
+            {showHelp && (
+                <div style={{
+                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.8)', zIndex: 1000,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                    <div style={{
+                        background: '#1a1a1a', padding: '30px', borderRadius: '12px',
+                        maxWidth: '400px', width: '90%', position: 'relative', border: '1px solid #333'
+                    }}>
+                        <button
+                            onClick={() => setShowHelp(false)}
+                            style={{ position: 'absolute', top: '15px', right: '15px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}
+                        >
+                            <X size={24} />
+                        </button>
+
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>How it Works</h3>
+
+                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
+                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>1</div>
+                            <div><strong style={{ color: '#fff' }}>Draft</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>Enter your raw video title idea.</p></div>
+                        </div>
+                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
+                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>2</div>
+                            <div><strong style={{ color: '#fff' }}>Analyze</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>AI scores it against viral psychology.</p></div>
+                        </div>
+                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
+                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>3</div>
+                            <div><strong style={{ color: '#fff' }}>Optimize</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>Get 5+ higher-CTR variations instantly.</p></div>
+                        </div>
+
+                        <button onClick={() => setShowHelp(false)} className="primary-btn" style={{ width: '100%', marginTop: '10px' }}>Got it</button>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }
