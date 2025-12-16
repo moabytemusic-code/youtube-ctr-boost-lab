@@ -237,44 +237,37 @@ export default function Home() {
 
             {/* Help Button - Moved Outside Main */}
             {/* Help Button - Moved Outside Main */}
+            {/* Help Button - Moved Outside Main */}
             <button
                 onClick={() => setShowHelp(true)}
-                style={{ position: 'fixed', top: '20px', right: '20px', backgroundColor: '#000000', border: '1px solid #333333', padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 99999, boxShadow: '0 4px 20px rgba(0,0,0,0.8)', fontWeight: 'bold', fontSize: '14px' }}
+                className="floating-help-btn"
             >
                 <span>How To Use</span> <CircleHelp size={20} />
             </button>
 
             {/* Help Modal */}
             {showHelp && (
-                <div style={{
-                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-                    backgroundColor: 'rgba(0,0,0,0.9)', zIndex: 100000,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    backdropFilter: 'blur(5px)'
-                }}>
-                    <div style={{
-                        backgroundColor: '#1a1a1a', padding: '30px', borderRadius: '16px',
-                        maxWidth: '400px', width: '90%', position: 'relative', border: '1px solid #333'
-                    }}>
+                <div className="modal-overlay">
+                    <div className="modal-content">
                         <button
                             onClick={() => setShowHelp(false)}
-                            style={{ position: 'absolute', top: '15px', right: '15px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}
+                            className="modal-close-btn"
                         >
                             <X size={24} />
                         </button>
 
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>How it Works</h3>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '24px', color: '#fff' }}>How it Works</h3>
 
-                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>1</div>
+                        <div className="step-row">
+                            <div className="step-circle">1</div>
                             <div><strong style={{ color: '#fff' }}>Draft</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>Enter your raw video title idea.</p></div>
                         </div>
-                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>2</div>
+                        <div className="step-row">
+                            <div className="step-circle">2</div>
                             <div><strong style={{ color: '#fff' }}>Analyze</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>AI scores it against viral psychology.</p></div>
                         </div>
-                        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                            <div style={{ background: '#333', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>3</div>
+                        <div className="step-row">
+                            <div className="step-circle">3</div>
                             <div><strong style={{ color: '#fff' }}>Optimize</strong><p style={{ color: '#888', fontSize: '0.9rem' }}>Get 5+ higher-CTR variations instantly.</p></div>
                         </div>
 
